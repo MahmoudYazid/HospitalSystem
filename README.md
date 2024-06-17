@@ -8,7 +8,8 @@ i started to write the  requirement for the system
 which technology i will work with ? asp mvc
 
 ## step 3 
-Desgin the schema
+Desgin the erd an the relations
 ![hospitalDesign drawio](https://github.com/MahmoudYazid/HospitalSystem/assets/60329627/ac8bb2ce-b198-45d8-953d-b0e92ad24fa8)
 
-
+## step 4 
+convert erd to schema
