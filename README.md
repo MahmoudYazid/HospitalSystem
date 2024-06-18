@@ -13,3 +13,5 @@ Desgin the erd an the relations
 
 ## step 4 
 convert erd to schema
+![finalschema](https://github.com/MahmoudYazid/HospitalSystem/assets/60329627/d3573530-4764-4638-bc4b-fda7e425b9cd)
+
