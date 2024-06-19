@@ -1,0 +1,100 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+<div class="d-flex flex-row bd-highlight mb-3 flex-wrap-reverse">
+    <div class="card m-5 " style="width: 18rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6vdueakGImGactugJLkm9szSZD4KDT_BtlQ&s" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Patient</h5>
+            <p class="card-text">search , Modify , delete Patients</p>
+            
+
+                @Html.ActionLink("Go", "Index", "patientModels")
+
+           
+        </div>
+    </div>
+
+    <div class="card m-5 " style="width: 18rem;">
+        <img src="https://hips.hearstapps.com/hmg-prod/images/portrait-of-a-happy-young-doctor-in-his-clinic-royalty-free-image-1661432441.jpg?crop=0.66698xw:1xh;center,top&resize=1200:*" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">our Doctor</h5>
+            <p class="card-text">search , Modify , delete Doctors</p>
+            
+
+                @Html.ActionLink("Go", "Index", "doctorModels")
+
+      
+        </div>
+    </div>
+
+    <div class="card m-5 " style="width: 18rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQoLhqENn31L0JyEtMWT2m8MnluWrfheFscxw&s" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">Reports</h5>
+            <p class="card-text">search , Modify , delete Reports</p>
+
+
+            @Html.ActionLink("Go", "Index", "reportsModels")
+
+
+        </div>
+    </div>
+
+
+
+    <div class="card m-5 " style="width: 18rem;">
+        <img src="https://www.aha.org/sites/default/files/2023-05/Retail-Clinics-Target-Chronic-Diseases.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">clinics</h5>
+            <p class="card-text">search , Modify , delete clinics</p>
+
+
+            @Html.ActionLink("Go", "Index", "clinicModels")
+
+
+        </div>
+    </div>
+
+
+    <div class="card m-5 " style="width: 18rem;">
+        <img src="https://thumbs.dreamstime.com/z/clean-recipe-prescription-drug-statement-near-scattered-white-pills-tablets-blue-background-pharmacological-me-127276808.jpg" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">recipes</h5>
+            <p class="card-text">search , Modify , delete recipes</p>
+
+
+            @Html.ActionLink("Go", "Index", "recipes")
+
+
+        </div>
+    </div>
+
+
+    <div class="card m-5 " style="width: 18rem;">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTtbRqvJgWFUaxCBar85xywdeIoTZKE9wq_Ig&s" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">appointment</h5>
+            <p class="card-text">search , Modify , delete appointment</p>
+
+
+            @Html.ActionLink("Go", "Index", "appointmentModels")
+
+
+        </div>
+    </div>
+
+
+    <div class="card m-5 " style="width: 18rem;">
+        <img src="https://marvel-b1-cdn.bc0a.com/f00000000296536/www.elotouch.com.ar/media/wysiwyg/Press/Elo_Blog_Smart_Hospital_500x336.png" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">rooms</h5>
+            <p class="card-text">search , Modify , delete rooms</p>
+
+
+            @Html.ActionLink("Go", "Index", "roomModels")
+
+
+        </div>
+    </div>
+</div>
