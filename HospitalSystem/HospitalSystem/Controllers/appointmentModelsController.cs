@@ -49,7 +49,7 @@ namespace HospitalSystem.Controllers
         public IActionResult Create()
         {
             ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name");
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id");
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name");
             return View();
         }
 
@@ -60,10 +60,24 @@ namespace HospitalSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,DoctorId,PatientId,status,time")] appointmentModel appointmentModel)
         {
+
+            if (await _context.appointmentDb.FirstOrDefaultAsync(x => x.time == appointmentModel.time && x.DoctorId == appointmentModel.DoctorId) == null)
+            {
                 _context.Add(appointmentModel);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-          
+
+            }
+            else
+            {
+                ViewBag.alert = true;
+                ViewBag.alertMessage = "this date used before";
+           
+                ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name");
+                ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name");
+                return View();
+            }
+
         }
 
         // GET: appointmentModels/Edit/5
@@ -80,7 +94,7 @@ namespace HospitalSystem.Controllers
                 return NotFound();
             }
             ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name", appointmentModel.DoctorId);
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id", appointmentModel.PatientId);
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name", appointmentModel.PatientId);
             return View(appointmentModel);
         }
 

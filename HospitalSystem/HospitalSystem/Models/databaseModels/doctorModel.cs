@@ -13,6 +13,7 @@ namespace HospitalSystem.Models.databaseModels
         [Required]
         public string name{ get; set; }
         [ForeignKey("clinicModel")]
+        [Required]
         public int clinicID { get; set; }
 
         public ClinicModel clinicModel { get; set; }

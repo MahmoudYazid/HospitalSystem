@@ -188,7 +188,7 @@ namespace HospitalSystem.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
-                    b.Property<int?>("PatientId")
+                    b.Property<int>("PatientId")
                         .HasColumnType("int");
 
                     b.Property<string>("statement")
@@ -299,7 +299,9 @@ namespace HospitalSystem.Migrations
                 {
                     b.HasOne("HospitalSystem.Models.databaseModels.patientModel", "patientModel")
                         .WithMany()
-                        .HasForeignKey("PatientId");
+                        .HasForeignKey("PatientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
 
                     b.Navigation("patientModel");
                 });

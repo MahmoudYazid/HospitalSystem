@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalSystem.Migrations
 {
     [DbContext(typeof(MasterDbContext))]
-    [Migration("20240619094048_initmig")]
-    partial class initmig
+    [Migration("20240629133252_init2")]
+    partial class init2
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -44,6 +44,32 @@ namespace HospitalSystem.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("clinicDb");
+                });
+
+            modelBuilder.Entity("HospitalSystem.Models.databaseModels.DrugsModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Description")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<int?>("recipeId")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("recipeId");
+
+                    b.ToTable("DrugsListDb");
                 });
 
             modelBuilder.Entity("HospitalSystem.Models.databaseModels.appointmentModel", b =>
@@ -137,10 +163,6 @@ namespace HospitalSystem.Migrations
                     b.Property<int>("PatientId")
                         .HasColumnType("int");
 
-                    b.Property<string>("drugs")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<DateTime>("time")
                         .HasColumnType("datetime2");
 
@@ -230,6 +252,13 @@ namespace HospitalSystem.Migrations
                     b.ToTable("roomWaitingListDb");
                 });
 
+            modelBuilder.Entity("HospitalSystem.Models.databaseModels.DrugsModel", b =>
+                {
+                    b.HasOne("HospitalSystem.Models.databaseModels.recipe", null)
+                        .WithMany("drugs")
+                        .HasForeignKey("recipeId");
+                });
+
             modelBuilder.Entity("HospitalSystem.Models.databaseModels.appointmentModel", b =>
                 {
                     b.HasOne("HospitalSystem.Models.databaseModels.doctorModel", "doctorModel")
@@ -316,6 +345,11 @@ namespace HospitalSystem.Migrations
                         .IsRequired();
 
                     b.Navigation("patientModel");
+                });
+
+            modelBuilder.Entity("HospitalSystem.Models.databaseModels.recipe", b =>
+                {
+                    b.Navigation("drugs");
                 });
 #pragma warning restore 612, 618
         }

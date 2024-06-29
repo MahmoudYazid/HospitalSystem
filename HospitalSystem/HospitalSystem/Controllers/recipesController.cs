@@ -49,7 +49,7 @@ namespace HospitalSystem.Controllers
         public IActionResult Create()
         {
             ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name");
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id");
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name");
             return View();
         }
 
@@ -60,12 +60,11 @@ namespace HospitalSystem.Controllers
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create([Bind("Id,DoctorId,PatientId,time,drugs")] recipe recipe)
         {
-          
+         
                 _context.Add(recipe);
                 await _context.SaveChangesAsync();
                 return RedirectToAction(nameof(Index));
-           
-          
+   
         }
 
         // GET: recipes/Edit/5
@@ -82,7 +81,7 @@ namespace HospitalSystem.Controllers
                 return NotFound();
             }
             ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name", recipe.DoctorId);
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id", recipe.PatientId);
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name", recipe.PatientId);
             return View(recipe);
         }
 
@@ -98,8 +97,6 @@ namespace HospitalSystem.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
                 try
                 {
                     _context.Update(recipe);
@@ -117,10 +114,7 @@ namespace HospitalSystem.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name", recipe.DoctorId);
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id", recipe.PatientId);
-            return View(recipe);
+       
         }
 
         // GET: recipes/Delete/5

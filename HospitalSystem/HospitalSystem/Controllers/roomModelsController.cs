@@ -43,11 +43,11 @@ namespace HospitalSystem.Controllers
 
             return View(roomModel);
         }
-
+        //  
         // GET: roomModels/Create
         public IActionResult Create()
         {
-            ViewData["PatientId"] = new SelectList(_context.patientDb.ToList(), "Id", "Id");
+            ViewData["PatientId"] = new SelectList(_context.patientDb.ToList(), "Id", "Name");
             return View();
         }
 
@@ -79,7 +79,7 @@ namespace HospitalSystem.Controllers
             {
                 return NotFound();
             }
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id", roomModel.PatientId);
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name", roomModel.PatientId);
             return View(roomModel);
         }
 
@@ -95,8 +95,7 @@ namespace HospitalSystem.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+        
                 try
                 {
                     _context.Update(roomModel);
@@ -114,8 +113,8 @@ namespace HospitalSystem.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id", roomModel.PatientId);
+          
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name", roomModel.PatientId);
             return View(roomModel);
         }
 

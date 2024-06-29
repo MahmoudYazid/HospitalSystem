@@ -14,6 +14,7 @@ namespace HospitalSystem.Models.databaseModels
         public Microsoft.EntityFrameworkCore.DbSet<roomModel> roomDb { get; set; }
         public Microsoft.EntityFrameworkCore.DbSet<roomWaitingListModel> roomWaitingListDb { get; set; }
 
+
         public MasterDbContext(DbContextOptions<MasterDbContext> options) : base(options) { 
         
         

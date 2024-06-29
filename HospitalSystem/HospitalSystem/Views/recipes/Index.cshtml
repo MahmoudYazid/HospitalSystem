@@ -1,10 +1,10 @@
 ﻿@model IEnumerable<HospitalSystem.Models.databaseModels.recipe>
 
 @{
-    ViewData["Title"] = "Index";
+    ViewData["Title"] = "recipe Model";
 }
 
-<h1>Index</h1>
+<h1>recipe Model</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
@@ -19,10 +19,12 @@
                 @Html.DisplayNameFor(model => model.drugs)
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.doctorModel)
+                doctor Name
+                
             </th>
             <th>
-                @Html.DisplayNameFor(model => model.patientModel)
+                patient Name
+               
             </th>
             <th></th>
         </tr>
@@ -40,7 +42,7 @@
                 @Html.DisplayFor(modelItem => item.doctorModel.name)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.patientModel.Id)
+                @Html.DisplayFor(modelItem => item.patientModel.Name)
             </td>
             <td>
                 <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |

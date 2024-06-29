@@ -9,10 +9,12 @@ namespace HospitalSystem.Models.databaseModels
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 
         public int Id { get; set; }
-        
+        [Required]
         public string statement { get; set; }
+        [Required]
         public string type { get; set; }
         [ForeignKey("patientModel")]
+        [Required]
         public int? PatientId { get; set; } = null; 
         public patientModel patientModel { get; set; }
     }

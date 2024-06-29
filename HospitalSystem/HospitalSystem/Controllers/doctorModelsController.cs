@@ -47,7 +47,7 @@ namespace HospitalSystem.Controllers
         // GET: doctorModels/Create
         public IActionResult Create()
         {
-            ViewData["clinicID"] = new SelectList(_context.clinicDb, "Id", "Id");
+            ViewData["clinicID"] = new SelectList(_context.clinicDb, "Id", "name");
             return View();
         }
 
@@ -77,7 +77,7 @@ namespace HospitalSystem.Controllers
             {
                 return NotFound();
             }
-            ViewData["clinicID"] = new SelectList(_context.clinicDb, "Id", "Id", doctorModel.clinicID);
+            ViewData["clinicID"] = new SelectList(_context.clinicDb, "Id", "name", doctorModel.clinicID);
             return View(doctorModel);
         }
 

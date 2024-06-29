@@ -11,11 +11,14 @@ namespace HospitalSystem.Models.databaseModels
         public int Id { get; set; }
 
         [ForeignKey("doctorModel")]
+        [Required]
         public int DoctorId { get; set; }
         [ForeignKey("patientModel")]
+        [Required]
         public int PatientId { get; set; }
+        [Required]
         public DateTime time { get; set; }
-
+        [Required]
         public string report { get; set; }
         public doctorModel doctorModel { get; set; }
         public patientModel patientModel { get; set; }

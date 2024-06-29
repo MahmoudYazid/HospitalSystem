@@ -49,7 +49,7 @@ namespace HospitalSystem.Controllers
         public IActionResult Create()
         {
             ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name");
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id");
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name");
             return View();
         }
 
@@ -82,7 +82,7 @@ namespace HospitalSystem.Controllers
                 return NotFound();
             }
             ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name", reportsModel.DoctorId);
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id", reportsModel.PatientId);
+            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Name", reportsModel.PatientId);
             return View(reportsModel);
         }
 
@@ -98,8 +98,7 @@ namespace HospitalSystem.Controllers
                 return NotFound();
             }
 
-            if (ModelState.IsValid)
-            {
+         
                 try
                 {
                     _context.Update(reportsModel);
@@ -117,10 +116,7 @@ namespace HospitalSystem.Controllers
                     }
                 }
                 return RedirectToAction(nameof(Index));
-            }
-            ViewData["DoctorId"] = new SelectList(_context.doctorDb, "Id", "name", reportsModel.DoctorId);
-            ViewData["PatientId"] = new SelectList(_context.patientDb, "Id", "Id", reportsModel.PatientId);
-            return View(reportsModel);
+         
         }
 
         // GET: reportsModels/Delete/5

@@ -1,28 +1,7 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\",
-  "Documents": [
-    {
-      "AbsoluteMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|c:\\users\\ahmed\\desktop\\git\\hospitalsystem\\hospitalsystem\\hospitalsystem\\controllers\\roommodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|solutionrelative:hospitalsystem\\controllers\\roommodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|c:\\users\\ahmed\\desktop\\git\\hospitalsystem\\hospitalsystem\\hospitalsystem\\views\\roommodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|solutionrelative:hospitalsystem\\views\\roommodels\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|c:\\users\\ahmed\\desktop\\git\\hospitalsystem\\hospitalsystem\\hospitalsystem\\models\\databasemodels\\roomwaitinglistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|solutionrelative:hospitalsystem\\models\\databasemodels\\roomwaitinglistmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|c:\\users\\ahmed\\desktop\\git\\hospitalsystem\\hospitalsystem\\hospitalsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|solutionrelative:hospitalsystem\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|c:\\users\\ahmed\\desktop\\git\\hospitalsystem\\hospitalsystem\\hospitalsystem\\controllers\\appointmentmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F63E4406-E436-4A75-AE73-BCE518F0EEE2}|HospitalSystem\\HospitalSystem.csproj|solutionrelative:hospitalsystem\\controllers\\appointmentmodelscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    }
-  ],
+  "Documents": [],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
@@ -30,7 +9,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": -1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -39,71 +18,6 @@
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{75188d03-9892-4ae2-abf1-207126247ce5}"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Create.cshtml",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Views\\roomModels\\Create.cshtml",
-              "RelativeDocumentMoniker": "HospitalSystem\\Views\\roomModels\\Create.cshtml",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Views\\roomModels\\Create.cshtml",
-              "RelativeToolTip": "HospitalSystem\\Views\\roomModels\\Create.cshtml",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABoAAAAQAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T09:42:52.745Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "roomModelsController.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Controllers\\roomModelsController.cs",
-              "RelativeDocumentMoniker": "HospitalSystem\\Controllers\\roomModelsController.cs",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Controllers\\roomModelsController.cs",
-              "RelativeToolTip": "HospitalSystem\\Controllers\\roomModelsController.cs",
-              "ViewState": "AQIAACQAAAAAAAAAAAAAADEAAABOAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T09:41:41.41Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "roomWaitingListModel.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Models\\databaseModels\\roomWaitingListModel.cs",
-              "RelativeDocumentMoniker": "HospitalSystem\\Models\\databaseModels\\roomWaitingListModel.cs",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Models\\databaseModels\\roomWaitingListModel.cs",
-              "RelativeToolTip": "HospitalSystem\\Models\\databaseModels\\roomWaitingListModel.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAAHAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T09:38:23.77Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Index.cshtml",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Views\\Home\\Index.cshtml",
-              "RelativeDocumentMoniker": "HospitalSystem\\Views\\Home\\Index.cshtml",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Views\\Home\\Index.cshtml",
-              "RelativeToolTip": "HospitalSystem\\Views\\Home\\Index.cshtml",
-              "ViewState": "AQIAAEwAAAAAAAAAAAAQwF4AAAAxAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2024-06-19T09:19:20.249Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "appointmentModelsController.cs",
-              "DocumentMoniker": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Controllers\\appointmentModelsController.cs",
-              "RelativeDocumentMoniker": "HospitalSystem\\Controllers\\appointmentModelsController.cs",
-              "ToolTip": "C:\\Users\\ahmed\\Desktop\\GIT\\HospitalSystem\\HospitalSystem\\HospitalSystem\\Controllers\\appointmentModelsController.cs",
-              "RelativeToolTip": "HospitalSystem\\Controllers\\appointmentModelsController.cs",
-              "ViewState": "AQIAAFEAAAAAAAAAAAAcwGoAAAAoAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-06-19T09:19:15.275Z",
-              "EditorCaption": ""
             }
           ]
         }

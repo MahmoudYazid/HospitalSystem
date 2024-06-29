@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace HospitalSystem.Migrations
 {
     /// <inheritdoc />
-    public partial class initmig : Migration
+    public partial class init : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -136,8 +136,7 @@ namespace HospitalSystem.Migrations
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DoctorId = table.Column<int>(type: "int", nullable: false),
                     PatientId = table.Column<int>(type: "int", nullable: false),
-                    time = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    drugs = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    time = table.Column<DateTime>(type: "datetime2", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -184,6 +183,26 @@ namespace HospitalSystem.Migrations
                         onDelete: ReferentialAction.Cascade);
                 });
 
+            migrationBuilder.CreateTable(
+                name: "DrugsListDb",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    recipeId = table.Column<int>(type: "int", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_DrugsListDb", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_DrugsListDb_recipesDb_recipeId",
+                        column: x => x.recipeId,
+                        principalTable: "recipesDb",
+                        principalColumn: "Id");
+                });
+
             migrationBuilder.CreateIndex(
                 name: "IX_appointmentDb_DoctorId",
                 table: "appointmentDb",
@@ -198,6 +217,11 @@ namespace HospitalSystem.Migrations
                 name: "IX_doctorDb_clinicID",
                 table: "doctorDb",
                 column: "clinicID");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_DrugsListDb_recipeId",
+                table: "DrugsListDb",
+                column: "recipeId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_recipesDb_DoctorId",
@@ -237,7 +261,7 @@ namespace HospitalSystem.Migrations
                 name: "appointmentDb");
 
             migrationBuilder.DropTable(
-                name: "recipesDb");
+                name: "DrugsListDb");
 
             migrationBuilder.DropTable(
                 name: "reportsDb");
@@ -247,6 +271,9 @@ namespace HospitalSystem.Migrations
 
             migrationBuilder.DropTable(
                 name: "roomWaitingListDb");
+
+            migrationBuilder.DropTable(
+                name: "recipesDb");
 
             migrationBuilder.DropTable(
                 name: "doctorDb");
